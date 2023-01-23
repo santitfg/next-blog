@@ -1,0 +1,21 @@
+
+@tailwind base;
+@layer base {
+  a {
+    @apply text-orange-400;
+    @apply hover:underline;
+
+    @apply m-2
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+/* 
+no funciona
+@tailwind variants;
+
+@layer variants {
+  a{    
+  }
+} */
