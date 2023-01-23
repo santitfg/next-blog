@@ -1,13 +1,12 @@
 import React from "react";
-import Link from 'next/link';
-import {useState} from "react"; 
-import logoGitLab from "../../public/imgs/gitlab-logo-500.png";
-import logoGiHub from "../../public/imgs/github-mark.svg";
+import Link from "next/link";
+import { useState } from "react";
+import Image from "next/image";
 
 const Navbar = () => {
   // variable algo tosca para que el menu hamburguesa comience cerrado si la pantalla es sm sino estaria abierto y seria el menu comun
   //por ahi tendria que desacoplar el nabvar largo y el menu en sm
-  var estadoInicial=false; 
+  var estadoInicial = false;
   // if(window.innerWidth<=640)estadoInicial=true;
 
   const [estadoMenuHamburguesa, setMenuHamburguesa] = useState(estadoInicial);
@@ -22,7 +21,7 @@ const Navbar = () => {
       <nav className=" sm:flex flex-wrap  px-4  md:px-8 lg:px-10 justify-between">
         <div className="block sm:flex ">
           <div className="flex justify-between  ">
-            <Link to="/" className="p-4  font-bold ">
+            <Link href="/" className="p-4  font-bold ">
               <span className=" text-2xl">ICO</span>
             </Link>
             <button
@@ -41,7 +40,7 @@ const Navbar = () => {
           >
             <li>
               <Link
-                to="/tags/arte/"
+                href="/tags/arte/"
                 className="block mt-4 sm:inline-block sm:mt-0 text-teal hover:text-white mr-4 "
               >
                 arte
@@ -49,7 +48,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/tags/programacion"
+                href="/tags/programacion"
                 className="block mt-4 sm:inline-block sm:mt-0 text-teal hover:text-white mr-4"
               >
                 programacion
@@ -57,7 +56,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/about"
+                href="/about"
                 className="block mt-4 sm:inline-block sm:mt-0 text-teal hover:text-white mr-4"
               >
                 about
@@ -65,7 +64,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/tags"
+                href="/tags"
                 className="block mt-4 sm:inline-block sm:mt-0 text-teal hover:text-white mr-4"
               >
                 tags
@@ -83,17 +82,17 @@ const Navbar = () => {
             href="https://gitlab.com/stfg.prof"
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-4 sm:inline-block sm:mt-0 text-teal hover:text-white mr-4"
+            className="block mt-4 sm:inline-block sm:mt-0 text-teal hover:text-white mr-4 relative w-10 h-10"
           >
-            <img src={logoGitLab} alt="Gitlab" className="w-8 h-8"/>
+            <Image src="/imgs/gitlab.png" alt="gitlab logo" fill />
           </a>
           <a
             href="https://github.com/santitfg"
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-4 sm:inline-block sm:mt-0 text-teal hover:text-white mr-4"
+            className="block mt-4 sm:inline-block sm:mt-0 text-teal hover:text-white mr-4 relative w-10 h-10"
           >
-            <img src={logoGiHub} alt="Github"  className="w-8 h-8"/>
+            <Image src="/imgs/gitlab.png" alt="gitlab logo" fill />
           </a>
         </ul>
       </nav>

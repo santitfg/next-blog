@@ -1,5 +1,6 @@
 import Button from "@/components/button";
 import Post from "@/components/Post.jsx";
+import Image from 'next/image' 
 
 export const meta = {
   title: "hola mdx",
@@ -18,7 +19,7 @@ This is a list in markdown:
 - Three
 
 Checkout my React component:
-
+ <Image  src="/imgs/Instagram_Glyph_Gradient.png"   height={144}  width={144}   alt="instagram logo"/>
 <Button />
 
 export default ({ children }) => <Post content={children} data={meta} />;
