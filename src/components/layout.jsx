@@ -12,6 +12,8 @@ const Layout = (props) => {
       {/* <Navbar /> */}
       <Link  href="/">index</Link>
       <Link  href="/posts/primer-post">primer post</Link>
+      <Link href="/my-mdx-page">mdx test</Link>
+      <Link href="/probando">md test</Link>
     </header>
       <main className={styles.container}>
 
