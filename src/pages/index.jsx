@@ -16,12 +16,18 @@ export default function Home() {
     <Button />
       <main>
       <h1 className="text-3xl font-bold underline bg-[#1da1f2]" >index</h1>
- <Image
-    src="/imgs/gitlab-logo-500.png" // Route of the image file
+      <Image
+    src="/imgs/gitlab.png" // Route of the image file
     height={144} // Desired size with correct aspect ratio
     width={144} // Desired size with correct aspect ratio
     alt="gitlab logo"
   />
+   <Image
+  src="/imgs/Instagram_Glyph_Gradient.png" // Route of the image file
+  height={144} // Desired size with correct aspect ratio
+  width={144} // Desired size with correct aspect ratio
+  alt="instagram logo"
+/>
    <Image
     src="/imgs/github-mark.svg" // Route of the image file
     height={144} // Desired size with correct aspect ratio
