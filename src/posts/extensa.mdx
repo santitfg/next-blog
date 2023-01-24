@@ -1,0 +1,97 @@
+---
+date: "2022-12-14"
+title: "extensa 22 (DEMO)"
+tags: ["es", "hydra", "programacion"]
+thumbnailUrl: "/imgs/extensa/portada.jpg"
+---
+
+# extensa
+<!-- ## prototipo dentro
+## proyecto de investigacion que busca acercar el cuerpo a la interaccion con las computadoras  -->
+
+# [Demo aplicacion web](https://santitfg.github.io/hydra-hand) 
+## Basada en [Hydra](https://hydra.ojack.xyz/) y [Mediapipe](https://google.github.io/mediapipe/solutions/hands.html)
+
+
+## instrucciones de uso 
+Para su utilizacion se requiere una camara web o el uso de celular (en este ultimo no estan ajustadas las distancia del trackeo lo cual implica probar y acostumbrase a la distancia correctamente)
+
+al entrar en la web se pediran permisos para la camara
+una vez hecho esto, la camara capturarra la posicion de las manos como se ve a continuacion
+
+> ![ejemplo-0](https://gitlab.com/stfg.prof/hydra-webpack-mp/-/raw/main/fotos/ejemplo-uso-0.jpg)
+
+para agregar una operacion se utiliza el gesto de cerrar (el tiempo que se mantenga cerrado es importante)
+
+se sabra que la aplicacion esta leyendo correctamente el gesto por que se vuelven blancas los puntos de trackeo.
+> ![ejemplo-1](https://gitlab.com/stfg.prof/hydra-webpack-mp/-/raw/main/fotos/ejemplo-uso-1.jpg)
+
+ luego al soltar la mano se aplica una operacion dependiendo en la region que se sulte
+
+
+> ![ejemplo-2](https://gitlab.com/stfg.prof/hydra-webpack-mp/-/raw/main/fotos/ejemplo-uso-2.jpg)
+
+## Breve descripcion del funcionamiento interno
+Cada region tiene una funcion asociada
+permitiendo contruir cadenas de hasta 10 operaciones
+luego se subtraera la primera operacion realizada por ejemplo si tengo comienzo => op-1 op-2 ... op-10;
+al agregar una operacion 11
+la cadena quedaraia constituida asi :
+comienzo => op-2 ... op-11;
+
+
+## Instalacion en local
+Para intalarlo se requiere tener instaladado [npm](https://www.npmjs.com/package/npm)  
+Realizar las siguientes operaciones desde consola 
+ para windows buscar el cdr y en linux la terminal
+
+clonar el repositorio
+
+    git clone https://gitlab.com/stfg.prof/hydra-webpack-mp.git
+
+entrar en la carpeta
+
+    cd hydra-webpack-mp
+
+luego iniciar la aplicacion
+
+    npm run devMap
+
+
+## To Do:
+<!-- - [ ] ante el uso extenso la aplicacion se traba (en mozzila) buscar alguna solucion -->
+- [ ] agregar comandos para descargar img y codigo de hydra
+- [ ] agregar chache para que al rsetear la web no perder lo anterior!
+- [ ] refactorizar
+- [x] generar un build para web utilizando cdn o solucionar fallas en la peticion del modelo
+- [ ] desacoplar el canvas, y la camara del codigo de control (no los genero en el html por que hydra y mediapipe se relentizan al iniciar por la ref de un elemento ya creado)
+- [x] agregar modal con instrucciones
+- [ ] hace un submodulo del reconocimento de gestos
+- [ ] hace un submodulo del control de hydra
+- [ ] decidir si seguir con webpack o usar otro framework
+- [ ] realizar documentaciones del codigo (jsDoc?)
+- [ ] si va a crecer definir un gestor de templates html
+
+
+
+
+## notas 
+
+### existe una inversion del eje X para poder invertir la imagen de la camara
+### esto se ve reflejado en todos los calculos, y hay que inverir
+
+
+### valores harcodeados:
+* en centroide es de largo del array de landmarks
+* el limite de z en cercania (a.z<0.&& b.z<0.0)
+* la inversion del plot de posicion sobre el canvas
+* dentro de las funciones de analisisManos existen varias q tienen parametros por default dificiles de precisar (son un hardcodeo softs digamos)
+* LIMITE_OPERACIONES
+* MINIMO_MANO_CERRADA
+
+###  valores decididos a ojo y hardcodeados:
+* partiendo de un supuesto angulo de los dedos eleji que exista:
+* un angulo minimo para considerar la palma abierta.
+* y un angulo maximo para considerar el puño cerrado. 
+
+* fije una distancia provisoria de referencia para considerar si la mano se encuentra de lado.
