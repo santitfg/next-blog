@@ -30,7 +30,7 @@ const PostPage = ({ frontMatter: { title, date, description,thumbnailUrl }, mdxS
   return (
     <Layout>
       <Head>
-        <title>{title + date}</title>
+        <title>{title}</title>
         <meta name="description" content={description} />
         {/* el meta img no creo que funcione */}
         <meta property="og:image" content={process.env.NEXT_PUBLIC_HOST+thumbnailUrl} />
