@@ -4,6 +4,20 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
+
+  plugins: [require("daisyui")],
+
+  daisyui: {
+    styled: true,
+    themes: false,
+    base: false,
+    utils: true,
+    logs: false,
+    rtl: false,
+    prefix: "",
+    darkTheme: "dark",
+  },
+
   theme: {
     extend: {
       fontFamily: {
@@ -53,5 +67,4 @@ module.exports = {
       // }
     },
   },
-  plugins: [],
 }
