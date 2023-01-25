@@ -8,10 +8,11 @@ import Navbar from '@/components/navbar';
 import Image from 'next/image' 
 
 import Head from "next/head";
-import Link from "next/link";
+// import Link from "next/link";
 // import styles from '../styles/Home.module.css';
 import Layout from "@/components/layout";
 import SyntaxHighlighter from 'react-syntax-highlighter'
+import Youtube from "@/components/youtube";
 
 
 
@@ -21,7 +22,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 
 
 
-const components = { Navbar, Button, SyntaxHighlighter, Image }
+const components = { Navbar, Button, SyntaxHighlighter, Image, Youtube }
 
 
 
