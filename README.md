@@ -2,7 +2,8 @@
 
 # to do
 
-- [x]  Migracion de MDs
+- [x]  Migracion de MDs.
+- [ ] crear pagina 404 
 - [ ] creaion de contenidos
 - [ ] agregar un componente para yb (tenia algo resuelto en algun sketch de gatsby)
 - [ ] creacion pagina de bienvenida 
