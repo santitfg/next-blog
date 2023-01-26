@@ -11,7 +11,7 @@ const Home = ({ posts }) => {
     <>
       <Layout>
         <main className="max-w-[100%] md:max-w-[75%]  mx-auto text-justify">
-          <div className="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-1 md:gap-4 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-1 md:gap-4 ">
             {posts.map((post, index) => (
               <CardPreview data={post} key={post.slug} />
             ))}

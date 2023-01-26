@@ -1,6 +1,10 @@
 @layer components {
 
 
+  .gradiente-mobile{
+    @apply bg-gradient-to-b from-[#ffffff00] via-[#ffffffb9] to-[#ffffff00];
+
+  }
   .gradiente-principal {
     @apply bg-gradient-to-b from-[#f8fafce5] via-[#ffffffaa] to-[#f8fafce5];
   }
