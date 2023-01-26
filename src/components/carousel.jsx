@@ -1,14 +1,13 @@
 import React from "react";
 
 
- const images = ['https://images.unsplash.com/photo-1506501139174-099022df5260?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80', 'https://images.unsplash.com/photo-1523438097201-512ae7d59c44?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80', 'https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80']
 // images must be an array of urls , if using Next JS this could something like
 // const images = ['/img/img1.png', '/img/img2.png', '/img/img3.png']
 // images must be an array of urls , if using Next JS this could something like
 // const images = ['/img/img1.png', '/img/img2.png', '/img/img3.png']
 ///import images from "/imgs/micrones/*jpg"
 
-const Carousel = () => {
+const Carousel = ({images}) => {
   // codigo adaptado de  https://codepen.io/tacotoemeck 
 
   // We will start by storing the index of the current image in the state.
@@ -62,7 +61,7 @@ const Carousel = () => {
 
   // Tailwind styles. Most importantly notice position absolute, this will sit relative to the carousel's outer div.
   const arrowStyle =
-    'absolute text-white text-2xl z-10  h-10 w-10 opacity-75 flex items-center justify-center  bg-black rounded-full ';
+    'absolute z-10  h-full  px-2  inset-y-0 opacity-50 hover:opacity-75 flex items-center justify-center';
 
   // Let's create dynamic buttons. It can be either left or right. Using
   // isLeft boolean we can determine which side we'll be rendering our button
@@ -71,10 +70,10 @@ const Carousel = () => {
     <button
       type="button"
       onClick={isLeft ? previousImage : nextImage}
-      className={`${arrowStyle} ${isLeft ? 'left-4' : 'right-4'}`}
-      style={{ top: '50%' }}
+      className={`${arrowStyle} ${isLeft ? 'left-0' : 'right-0'}`}
     >
-      <span role="img" aria-label={`Arrow ${isLeft ? 'left' : 'right'}`} className="text-7xl text-center ">
+      <span role="img" aria-label={`Arrow ${isLeft ? 'left' : 'right'}`} 
+      className="text-7xl text-center  text-white ">
         {isLeft ? '«' : '»'}
       </span>
     </button>
@@ -87,15 +86,17 @@ const Carousel = () => {
   // set with position relative, so we can place our cotrol buttons using
   // absolute positioning on each side of the image.
     <div className=" flex justify-center items-center relative ">
+                {sliderControl(true)}
+
         <div className="carousel">
-          {sliderControl(true)}
           {images.map((img, i) => (
             <div className="w-full flex-shrink-0" key={img} ref={refs[i]}>
               <img src={img} className="w-full object-contain" />
             </div>
           ))}
-          {sliderControl()}
         </div>
+        {sliderControl()}
+
     </div>
   );
 };

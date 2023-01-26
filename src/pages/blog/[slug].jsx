@@ -7,11 +7,11 @@ import Navbar from "@/components/navbar";
 import Image from "next/image";
 
 import Head from "next/head";
-// import Link from "next/link";
-// import styles from '../styles/Home.module.css';
 import Layout from "@/components/layout";
-import SyntaxHighlighter from "react-syntax-highlighter";
 import Youtube from "@/components/youtube";
+
+
+import SyntaxHighlighter from "react-syntax-highlighter";
 
 //  por temas de tiempo y sin necesidad de reinventar la rueda utilizo el codigo de Ebenezer Don
 //  https://blog.jetbrains.com/webstorm/2021/10/building-a-blog-with-next-js-and-mdx/#Adding_MDX_files_for_our_posts
