@@ -1,36 +1,13 @@
 import React from "react";
-
-// import Navbar from "./navbar";
-
-// const Layout = (props) => {
-//   return (
-//     <>
-//     <header>
-//       {/* <Navbar /> */}
-//       <Link  href="/">index</Link>
-//       <Link  href="/posts/primer-post">primer post</Link>
-//       <Link href="/my-mdx-page">mdx test</Link>
-//       <Link href="/probando">md test</Link>
-//     </header>
-//       <main >
-
-//       {props.children}
-//       </main>
-//     </>
-//   );
-// };
-// export default Layout;
-
-
-
 import Navbar from "./navbar";
+
 const Layout = (props) => {
   return (
     <>
     <header><Navbar />
 
     </header>
-    <div className="p-5"></div>
+    <div className="md:p-2 "></div>
       {/* <h1 className="bg-[#1da1f2] text-white"> {props.titulo}</h1> */}
 
       {props.children}
