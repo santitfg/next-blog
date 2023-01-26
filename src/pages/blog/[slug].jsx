@@ -9,6 +9,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Layout from "@/components/layout";
 import Youtube from "@/components/youtube";
+import Carousel from "@/components/carousel";
 
 
 import SyntaxHighlighter from "react-syntax-highlighter";
@@ -16,12 +17,23 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 //  por temas de tiempo y sin necesidad de reinventar la rueda utilizo el codigo de Ebenezer Don
 //  https://blog.jetbrains.com/webstorm/2021/10/building-a-blog-with-next-js-and-mdx/#Adding_MDX_files_for_our_posts
 
-const components = { Navbar, SyntaxHighlighter, Image, Youtube };
+const components = { Navbar, SyntaxHighlighter, Image, Youtube, Carousel };
+// const otro = { };
+
+// const dispatchImg=(key)=>{
+//   var images=undefined;
+//   if(key=="micrones"){
+//    images = ['/imgs/micrones/04.jpg', '/imgs/micrones/05.jpg',
+//   '/imgs/micrones/06.jpg','/imgs/micrones/07.jpg','/imgs/micrones/10.jpg','/imgs/micrones/12.jpg',
+//   '/imgs/micrones/14.jpg',];}
+// return images
+// }
 
 const PostPage = ({
-  frontMatter: { title, date, description, thumbnailUrl },
+  frontMatter: { title, date, description, thumbnailUrl,utils },
   mdxSource,
 }) => {
+  // const imgs=dispatchImg(utils);
   return (
     <Layout>
       <Head>
@@ -35,7 +47,8 @@ const PostPage = ({
       </Head>
       <div className="flex justify-center">
         <div className="mt-4 unreset w-11/12 md:w-3/4">
-          <MDXRemote {...mdxSource} components={components} />
+        <MDXRemote {...mdxSource} components={components} />
+        {/* <MDXRemote {...mdxSource} components={(imgs)?{components,imgs}:components} /> */}
         </div>
       </div>
     </Layout>

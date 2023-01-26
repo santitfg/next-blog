@@ -73,7 +73,7 @@ const Carousel = ({images}) => {
       className={`${arrowStyle} ${isLeft ? 'left-0' : 'right-0'}`}
     >
       <span role="img" aria-label={`Arrow ${isLeft ? 'left' : 'right'}`} 
-      className="text-7xl text-center  text-white ">
+      className="text-7xl text-center text-slate-500  ">
         {isLeft ? '«' : '»'}
       </span>
     </button>
@@ -87,7 +87,7 @@ const Carousel = ({images}) => {
   // absolute positioning on each side of the image.
     <div className=" flex justify-center items-center relative ">
                 {sliderControl(true)}
-
+{/* AJUSTAR MEJOR EL aspect ratio */}
         <div className="carousel">
           {images.map((img, i) => (
             <div className="w-full flex-shrink-0" key={img} ref={refs[i]}>
