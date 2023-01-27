@@ -9,7 +9,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Layout from "@/components/layout";
 import Youtube from "@/components/youtube";
-import Carousel from "@/components/carousel";
+import CarouselParent from "@/components/carouselparent";
 
 
 import SyntaxHighlighter from "react-syntax-highlighter";
@@ -17,7 +17,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 //  por temas de tiempo y sin necesidad de reinventar la rueda utilizo el codigo de Ebenezer Don
 //  https://blog.jetbrains.com/webstorm/2021/10/building-a-blog-with-next-js-and-mdx/#Adding_MDX_files_for_our_posts
 
-const components = { Navbar, SyntaxHighlighter, Image, Youtube, Carousel };
+const components = { Navbar, SyntaxHighlighter, Image, Youtube, CarouselParent };
 // const otro = { };
 
 // const dispatchImg=(key)=>{
