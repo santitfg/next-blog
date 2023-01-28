@@ -17,6 +17,9 @@ const Navbar = () => {
     setMenuHamburguesa(!estadoMenuHamburguesa);
   };
 
+/*   sizes="(max-width: 768px) 100vw,
+  (max-width: 1200px) 50vw,
+  33vw" */
   return (
     <>
       {/* justify-around  items-center justify-between flex*/}
@@ -25,7 +28,7 @@ const Navbar = () => {
           <div className="flex justify-between  ">
             <Link href="/" className="p-4  font-bold w-14 h-14 relative">
               <div>
-                <Image src="/imgs/icon.png" alt="icono" fill />
+                <Image src="/imgs/icon.png" alt="icono" fill/>
               </div>
             </Link>
             <button

@@ -16,6 +16,12 @@
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
   }
+  .img-carousel{
+    @apply w-full object-contain;
+  }
+  .container-carousel{
+    @apply w-full md:w-2/3 lg:w-1/2 md:hidden;
+  }
   .link-block
   {
     @apply block mt-4;

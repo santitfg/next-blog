@@ -46,7 +46,7 @@ const PostPage = ({
         />
       </Head>
       <div className="flex justify-center">
-        <div className="mt-4 unreset w-11/12 md:w-3/4">
+        <div className="mt-4 w-11/12 md:w-3/4 unreset">
         <MDXRemote {...mdxSource} components={components} />
         {/* <MDXRemote {...mdxSource} components={(imgs)?{components,imgs}:components} /> */}
         </div>

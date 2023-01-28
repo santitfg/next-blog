@@ -7,12 +7,13 @@ import path from "path";
 import matter from "gray-matter";
 
 const Home = ({ posts }) => {
-// buscar orden
-//   posts.sort((a, b) => {
-//     let da = new Date(a.date),
-//         db = new Date(b.date);
-//     return da - db;
-// });
+
+  posts.sort((a, b) => {
+    let da = new Date(a.frontMatter.date),
+        db = new Date(b.frontMatter.date);
+    return db - da ;
+});
+
   return (
     <>
       <Layout>
