@@ -17,7 +17,7 @@ const Haceres = ({ posts }) => {
   return (
     <>
              <Head>
-        <title>"Portfolio de Santiago fernandez"</title>
+        <title>"Santiago fernandez"</title>
         <meta name="description" content={"artista visual, programador e ilustrador"} />
         <meta
           property="og:image"
