@@ -15,21 +15,23 @@ const About = () => {
         />
       </Head>
       <Layout>
+
         <div className="flex justify-center ">
-          <div className="w-11/12 md:w-3/4 text-center text-5xl ">
+          <div className="w-11/12 md:w-3/4 text-center">
+          <div className="text-5xl"> Santiago Fernandez</div>
+
             <div className="flex justify-center w-full">
-                <Image className="m-a"
+                <Image className="m-a mt-14"
                   src={"/imgs/perfil.jpg"}
                   alt="foto perfil"
-                  width={606}
-                  height={797}                />
+                  width={303}
+                  height={400}                />
                               </div>
 
-                <p className="text-base " >Retrato que me hizo mi ami (
+                <p className="text-base mb-4" >Retrato que me hizo mi ami (
                 <a href="https://www.instagram.com/eoschandreu/" target="_blank" rel="noopener noreferrer">Chandreu</a>
                 )</p>
 
-            <div className="text-5xl- my-16 "> Santiago Fernandez</div>
 
             <div className=" w-full">
               <p className="m-auto md:w-2/3 text-lg  text-justify ">
@@ -56,7 +58,7 @@ const About = () => {
             </div>
 
             <br />
-            <Link href="/haceres" className="text-2xl-">Les invito a ver un poco de lo que suelo hacer</Link>
+            <Link href="/haceres" className="text-4xl">Les invito a ver un poco de lo que suelo hacer</Link>
           </div>
         </div>
         <br />
