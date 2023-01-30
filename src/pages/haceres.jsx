@@ -16,6 +16,14 @@ const Haceres = ({ posts }) => {
 
   return (
     <>
+             <Head>
+        <title>"Portfolio de Santiago fernandez"</title>
+        <meta name="description" content={"artista visual, programador e ilustrador"} />
+        <meta
+          property="og:image"
+          content={process.env.NEXT_PUBLIC_HOST +"/imgs/hydra-2022-9-5-0.10.3.jpg" }
+        />
+      </Head>
       <Layout>
         <main className="max-w-[100%] md:max-w-[75%]  mx-auto text-justify">
           <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-1 md:gap-4 ">

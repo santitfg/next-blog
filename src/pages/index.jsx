@@ -2,11 +2,18 @@ import Layout from "components/layout";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-
-
+"
 const About = () => {
   return (
     <>
+         <Head>
+        <title>"Portfolio de Santiago fernandez"</title>
+        <meta name="description" content={"artista visual, programador e ilustrador"} />
+        <meta
+          property="og:image"
+          content={process.env.NEXT_PUBLIC_HOST +"/imgs/hydra-2022-9-5-0.10.3.jpg" }
+        />
+      </Head>
       <Layout>
         <div className="flex justify-center ">
           <div className="w-11/12 md:w-3/4 text-center text-5xl ">
