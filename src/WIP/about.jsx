@@ -1,26 +1,24 @@
 import Layout from "components/layout";
 import Link from "next/link";
+import Carousel from "@/components/carousel";
+import HeaderBlog from "@/components/headerblog";
 import Image from "next/image";
-import Head from "next/head";
-
 
 const About = () => {
   return (
     <>
       <Layout>
         <div className="flex justify-center ">
-          <div className="w-11/12 md:w-3/4 text-center text-5xl ">
+          <div className="mt-4 w-11/12 md:w-3/4 text-center text-5xl ">
             <div className="flex justify-center w-full">
-                <Image className="m-a"
-                  src={"/imgs/perfil.jpg"}
+              <div className="w-full aspect-video relative">
+                <Image
+                  src={"/imgs/hydra-2022-9-5-0.10.3.png"}
                   alt="foto perfil"
-                  width={606}
-                  height={797}                />
-                              </div>
-
-                <p className="text-base " >Retrato que me hizo mi ami (
-                <a href="https://www.instagram.com/eoschandreu/" target="_blank" rel="noopener noreferrer">Chandreu</a>
-                )</p>
+                  fill
+                />
+              </div>
+            </div>
 
             <div className="text-5xl- my-16 "> Santiago Fernandez</div>
 
@@ -49,10 +47,9 @@ const About = () => {
             </div>
 
             <br />
-            <Link href="/haceres" className="text-2xl-">Les invito a ver un poco de lo que suelo hacer</Link>
+            <Link href="/haceres">obras</Link>
           </div>
         </div>
-        <br />
       </Layout>
     </>
   );

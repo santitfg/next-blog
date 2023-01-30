@@ -48,19 +48,19 @@ const Navbar = () => {
             {/* MOBILE */}
             <li>
               <Link href="/haceres" className="link-block">
-                haceres
+                Haceres
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/about" className="link-block">
                 Sobre mi
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link href="/cv" className="link-block">
                 CV
               </Link>
-            </li>
+            </li> */}
           </ul>
           {/* por comodidad hardcodeo este navbar duplicando codigo en otra ocasion agregare un windows en el client side o tomare otra estrategia */}
           <ul
@@ -71,19 +71,19 @@ const Navbar = () => {
             {/* escritorio */}
             <li>
               <Link href="/haceres" className="link-inline">
-                haceres
+                Haceres
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/about" className="link-inline">
                 Sobre mi
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link href="/cv" className="link-inline">
                 CV
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
         {/* por comodidad hardcodeo este navbar duplicando codigo en otra ocasion agregare un windows en el client side o tomare otra estrategia */}

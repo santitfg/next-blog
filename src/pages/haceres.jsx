@@ -6,7 +6,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const Home = ({ posts }) => {
+const Haceres = ({ posts }) => {
 
   posts.sort((a, b) => {
     let da = new Date(a.frontMatter.date),
@@ -52,4 +52,4 @@ export const getStaticProps = async () => {
   };
 };
 
-export default Home;
+export default Haceres;
