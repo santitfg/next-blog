@@ -2,7 +2,7 @@ import Layout from "components/layout";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-"
+
 const About = () => {
   return (
     <>
