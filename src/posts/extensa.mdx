@@ -7,37 +7,47 @@ thumbnailUrl: "/imgs/extensa/portada.jpg"
 
 # Extensa 22
 
-
 ### Basada en [Hydra](https://hydra.ojack.xyz/) y [Mediapipe](https://google.github.io/mediapipe/solutions/hands.html)
 
 ## Extensa un proyecto de investigacion que busca acercar el cuerpo a la interaccion con las computadoras por medio de generar una interfaz gestual extendiendo leguajes de Live Coding (programacion en vivo) a travez del trackeo y analisis del cuerpo via camara web
 
-
 ![puno](/imgs/extensa/puno.jpg)
 
-### actaulmente he desarrollado un prototipo funcional sobre el gesto de cerrar y abrir el puño puee probarse un [Demo de la aplicacion web](https://santitfg.github.io/hydra-hand) 
+### actaulmente he desarrollado un prototipo funcional sobre el gesto de cerrar y abrir el puño puee probarse un [Demo de la aplicacion web](https://santitfg.github.io/hydra-hand)
 
 ![mano](/imgs/extensa/mano_v2.jpg)
 
+## instrucciones de uso
 
-## instrucciones de uso 
-Para su utilizacion se requiere una camara web ( aun sigo desarrollando la app-web para celulares)
+Para su utilizacion se requiere una camara web (Y solamente para para navegadores de escritorio)
 
-al entrar en la web se pediran permisos para la camara
-una vez hecho esto, la camara capturara la posicion de la mano como se ve a continuacion (es importante que solo se le muestre a la camara una mano ya que aun no esta contemplado gestualidades con dos manos)
+Al entrar en la web se pediran permisos para la camara.
+Una vez hecho esto, la camara capturara la posicion de la mano como se ve a continuacion (es importante que solo se le muestre a la camara una mano ya que aun no esta contemplado gestualidades con dos manos).
 
 ![ejemplo-0](https://gitlab.com/stfg.prof/hydra-webpack-mp/-/raw/main/fotos/ejemplo-uso-0.jpg)
 
-para agregar una operacion se utiliza el gesto de cerrar (el tiempo que se mantenga cerrado es importante)
+Para agregar una operacion se utiliza el gesto de cerrar (El tiempo que se mantenga cerrada la mano es contemplado para la intensidad de la accion).
 
-se sabra que la aplicacion esta leyendo correctamente el gesto por que se vuelven blancas los puntos de trackeo.
+Se sabra que la aplicacion esta leyendo correctamente el gesto por que se vuelven blancas los puntos de trackeo.
 ![ejemplo-1](https://gitlab.com/stfg.prof/hydra-webpack-mp/-/raw/main/fotos/ejemplo-uso-1.jpg)
 
- luego al soltar la mano se aplica una operacion dependiendo en la region que se sulte
+Luego al soltar la mano se aplica una operacion dependiendo en la region que se sulte.
 
 ![ejemplo-2](https://gitlab.com/stfg.prof/hydra-webpack-mp/-/raw/main/fotos/ejemplo-uso-2.jpg)
 
 ---
 
 ## Cada region de la grilla tiene una operacion asociada (permitiendo contruir cadenas de operaciones a medida que se realiza el gesto)
+
+<ul clasName="list-disc">
+  <li>Arriba izquierda gira la imagen</li>
+  <li>Arriba centro mezcla la imagen con la anterior ( feedback)</li>
+  <li>Arriba derecha desplaza de forma continua la imagen hacia la derecha</li>
+  <li>Centro izquierda genera un caleidoscopio</li>
+  <li>Centro (dificil de explicar es mejor experimentarla) multiplica y fracciona el color.</li>
+  <li>Centro derecha superpone una capa de noise ( una textura visual rugosa )</li>
+  <li>Abajo izquierda superpone osciladores ( rayas de color)</li>
+  <li>Abajo centro distorsiona la.imagen segun el matiz de color.</li>
+  <li>Abajo derecha genera un cambio de la saturacion en el tiempo ( de forma de baiben u ondulante)</li>
+</ul>
 ![portada](/imgs/extensa/portada.jpg)
