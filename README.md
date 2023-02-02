@@ -9,7 +9,9 @@
 - [x] cambiar bienvenida como home
 - [x] agregar pagina cv
 - [x] agregar al navbar las pags
-- [ ] creaion de contenidos
+- [x] creaion de contenidos
+- [ ] optimizar las iamgenes
+- [ ] migrar los mdx hacia jsx comunes (yb y otros contenidos no cargan correctamente)
 - [ ] empezar a habitar un poco mas la web, usarla como poema y no como lo que debe ser 
 - [ ] agregar hydra (va a ser dificil quias)
 - [ ] crear interactividad (p5)
